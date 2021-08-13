@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Counter</title>
+</head>
+<body>
+    <div class="p-2">
+        <div class="container mt-5">
+            <div class="p-3 border border-dark w-50 mx-auto text-center bg-light">
+                <h1>Counter</h1>
+                <p>{{session['visits']}} times.</p>
+                <div>
+                    <a href="/add_two_visits" class="btn btn-success mx-3">Add two visits</a>
+                    <a href="/reset_session" class="btn btn-danger mx-3">Reset</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
